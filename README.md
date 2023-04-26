@@ -1,17 +1,16 @@
-![formation](./images/OpenClassRooms.png)
-
 # Formation Intégrateur Web - Projet 7
 
 ## 📎 Projet 7 : Kasa - Agence de location immobilière
 
-![cover](./images/screenshot.jpg)
+![screenshot](https://user-images.githubusercontent.com/94898151/234441430-089a003f-cd0d-4d5f-9d23-905d0834f68f.jpg)
+
 
 ## Technologies :
 
 - React
 - Sass
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Cyril-Develop/Kasa?style=for-the-badge)
+
 
 ## Installation :
 
@@ -22,9 +21,8 @@ Démarrer le serveur avec la commande `npm start`
 ## Tester le projet :
 
 ```terminal
-git clone https://github.com/Cyril-Develop/Kasa.git
+git clone : https://github.com/MohaDjm/kasa.git
 ```
-
 
 
 
