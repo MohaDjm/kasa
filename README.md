@@ -1,5 +1,3 @@
-![formation](./images/OpenClassRooms.png)
-
 # Formation Intégrateur Web - Projet 7
 
 ## 📎 Projet 7 : Kasa - Agence de location immobilière
