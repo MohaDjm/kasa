@@ -11,7 +11,7 @@
 - React
 - Sass
 
-![GitHub repo size](https://img.shields.io/github/repo-size/Cyril-Develop/Kasa?style=for-the-badge)
+
 
 ## Installation :
 
@@ -22,7 +22,7 @@ Démarrer le serveur avec la commande `npm start`
 ## Tester le projet :
 
 ```terminal
-git clone https://github.com/Cyril-Develop/Kasa.git
+git clone : https://github.com/MohaDjm/kasa.git
 ```
 
 
