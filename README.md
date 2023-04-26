@@ -4,7 +4,8 @@
 
 ## 📎 Projet 7 : Kasa - Agence de location immobilière
 
-![cover](./images/screenshot.jpg)
+![screenshot](https://user-images.githubusercontent.com/94898151/234441430-089a003f-cd0d-4d5f-9d23-905d0834f68f.jpg)
+
 
 ## Technologies :
 
