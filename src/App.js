@@ -13,10 +13,10 @@ const router = createBrowserRouter([
 	// 	path: "/accomodation/:id",
 	// 	element: <Accomodation />
 	// },
-	// {
-	// 	path: '/about',
-	// 	element: <About />
-	// },
+	{
+		path: '/about',
+		element: <About />
+	},
 	// {
 	// 	path: "*",
 	// 	element: <NotFound />
