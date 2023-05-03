@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<div className='home'>
 			<Header />
-			<Banner />
+			<Banner title="Chez vous, partout et ailleurs"/>
 			<Gallery />
 			<Footer />
 		</div>

@@ -1,5 +1,5 @@
 import './navbar.scss'
-import { Link } from 'react-router-dom'
+import {NavLink,  Link } from 'react-router-dom'
 
 export default function Navbar() {
 
@@ -7,11 +7,18 @@ export default function Navbar() {
 
     return (
         <nav className='nav'>
+            
             <ul className='nav_list'>
-                <li className={currentRoute === '/Kasa/' ? 'nav_list_item_active' : 'nav_list_item'}>
-                    <Link  to='/Kasa/'>
+                
+                {/* <li className={currentRoute === '/Kasa/' ? 'nav_list_item_active' : 'nav_list_item'}> */}
+                <li className='nav_list_item'>
+                    {/* <Link  to='/'>
                         Accueil
-                    </Link>
+                    </Link> */}
+                    <NavLink  to='/'
+            className={({isActive}) => isActive ? 'nav_list_item_active' : 'nav_list_item'}>
+                        Accueil
+                    </NavLink>
                 </li>
                 <li className={currentRoute === '/about' ? 'nav_list_item_active' : 'nav_list_item'}>
                     <Link  to='/about'>

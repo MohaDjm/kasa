@@ -9,7 +9,7 @@ export default function About() {
 	return (
 		<div>
 			<Header />
-			<Banner />
+			<Banner classImg="banner_about"/>
 			<Footer />
 		</div>
 	)
