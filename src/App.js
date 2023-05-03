@@ -6,39 +6,39 @@ import { createBrowserRouter, RouterProvider, BrowserRouter, Routes, Route } fro
 
 const router = createBrowserRouter([
 	{
-		path: "/Kasa/",
+		path: "/",
 		element: <Home />
 	},
-	// {
-	// 	path: "/accomodation/:id",
-	// 	element: <Accomodation />
-	// },
+	{
+		path: "/accomodation/:id",
+		element: <Accomodation />
+	},
 	{
 		path: '/about',
 		element: <About />
 	},
-	// {
-	// 	path: "*",
-	// 	element: <NotFound />
-	// },
+	{
+		path: "*",
+		element: <NotFound />
+	},
 ]);
 
 function App() {
 	return (
 		<>
-			{/* <RouterProvider router={router}/> */}
+			<RouterProvider router={router}/>
 
-			{/* <RouterProvider> */}
-				<BrowserRouter>
-					<Routes>
-						<Route path="/" element={<Home />} />	
-						{/* <Route path="/accomodation/:id/" element={<Accomodation />} />	 */}
-						<Route path="/about/" element={<About />} />	
-						{/* <Route path="*" element={<NotFound />} />	 */}
-					</Routes>
-				</BrowserRouter>
-			{/* </RouterProvider> */}
-		</>
+{/* // 			<RouterProvider>
+// 				<BrowserRouter>
+// 					<Routes>
+// 						<Route path="/" element={<Home />} />	
+// 						<Route path="/accomodation/:id/" element={<Accomodation />} />	
+// 						<Route path="/about/" element={<About />} />	
+// 						<Route path="*" element={<NotFound />} />	
+// 					</Routes>
+// 				</BrowserRouter>
+// 			</RouterProvider> */}
+ 		</>
 	);
 }
 
