@@ -8,29 +8,41 @@ import Footer from "../../components/footer/Footer";
 import Collapse from '../../components/collapse/Collapse';
 import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.png';
-
+import { Navigate } from 'react-router-dom';
 
 export default function Accomodation() {
 	
-	const [imageSlider, setImageSlider] = useState([]);
+	// const [imageSlider, setImageSlider] = useState([]);
 
 	const idAccomodation = useParams('id').id;
 	const dataCurrentAccomodation = datas.filter(data => data.id === idAccomodation);
 	
-	useEffect(() => {
-		const dataCurrentAccomodation = datas.filter(data => data.id === idAccomodation);
-		setImageSlider(dataCurrentAccomodation[0].pictures);
-	}, [idAccomodation]);
+	
+	// useEffect(() => {
+	// 	const dataCurrentAccomodation = datas.filter(data => data.id === idAccomodation);
+	// 	if (dataCurrentAccomodation.length === 0){
+	// 		return <Navigate to="/404"/>
+	
+	// 	}
+	// 	setImageSlider(dataCurrentAccomodation[0].pictures);
+	// }, [idAccomodation]);
+
+	if (dataCurrentAccomodation.length === 0){
+		return <Navigate to="/404"/>
+
+	}
 
 	const name = dataCurrentAccomodation[0].host.name.split(' '); 
 	const rating = dataCurrentAccomodation[0].rating;
 	const description  = dataCurrentAccomodation[0].description;
 	const equipments = dataCurrentAccomodation[0].equipments;
 
+		
+
 	return (
 		<>
 			<Header/>
-			<Slider imageSlider={imageSlider}/>
+			<Slider imageSlider={dataCurrentAccomodation[0].pictures}/>
 			<main className="accomodation">
 				<div className="accomodation_content">
 					<div className="accomodation_content_infos">
@@ -69,6 +81,18 @@ export default function Accomodation() {
 					</div>
 					<div className="accomodation_collapse_item">
 						<Collapse title={'Équipements'} content={equipments}/>
+
+						{/* <Collapse>
+							<h2>TITLE</h2>
+							<ul>
+								{equipments && equipments.map((equip, index) =>{
+									return (
+										<li key={index}>{equip}</li>
+									)
+								})}
+							</ul>
+							<Collapse title={'Équipements'} content={equipments}/>
+						</Collapse> */}
 					</div>	
 				</div>
 			</main>
