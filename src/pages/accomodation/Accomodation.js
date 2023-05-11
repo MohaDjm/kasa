@@ -1,5 +1,4 @@
 import './accomodation.scss'
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import datas from '../../data/logements.json'
 import Header from "../../components/header/Header";
@@ -9,23 +8,13 @@ import Collapse from '../../components/collapse/Collapse';
 import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.png';
 import { Navigate } from 'react-router-dom';
+import Tags from '../../components/tags/Tags';
+
 
 export default function Accomodation() {
 	
-	// const [imageSlider, setImageSlider] = useState([]);
-
 	const idAccomodation = useParams('id').id;
 	const dataCurrentAccomodation = datas.filter(data => data.id === idAccomodation);
-	
-	
-	// useEffect(() => {
-	// 	const dataCurrentAccomodation = datas.filter(data => data.id === idAccomodation);
-	// 	if (dataCurrentAccomodation.length === 0){
-	// 		return <Navigate to="/404"/>
-	
-	// 	}
-	// 	setImageSlider(dataCurrentAccomodation[0].pictures);
-	// }, [idAccomodation]);
 
 	if (dataCurrentAccomodation.length === 0){
 		return <Navigate to="/404"/>
@@ -48,13 +37,7 @@ export default function Accomodation() {
 					<div className="accomodation_content_infos">
 						<h1>{dataCurrentAccomodation[0].title}</h1>
 						<p>{dataCurrentAccomodation[0].location}</p>
-						<div>
-							{dataCurrentAccomodation[0].tags.map((tag, index) => {
-								return (
-									<button key={index}>{tag}</button>
-								)
-							})}
-						</div>
+						<Tags tags={dataCurrentAccomodation[0].tags} />
 					</div>
 					<div className="accomodation_content_host">
 						<div>
@@ -82,17 +65,6 @@ export default function Accomodation() {
 					<div className="accomodation_collapse_item">
 						<Collapse title={'Équipements'} content={equipments}/>
 
-						{/* <Collapse>
-							<h2>TITLE</h2>
-							<ul>
-								{equipments && equipments.map((equip, index) =>{
-									return (
-										<li key={index}>{equip}</li>
-									)
-								})}
-							</ul>
-							<Collapse title={'Équipements'} content={equipments}/>
-						</Collapse> */}
 					</div>	
 				</div>
 			</main>

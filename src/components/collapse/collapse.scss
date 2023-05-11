@@ -27,6 +27,7 @@
         .arrow_down{
             transform: rotate(180deg);
         }
+        
     }
     &_content{
         display: flex;
@@ -68,4 +69,5 @@
             width: 100%;
         }    
     }
+
 }
