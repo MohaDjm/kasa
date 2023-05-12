@@ -37,13 +37,13 @@ export default function Accomodation() {
 					<div className="accomodation_content_infos">
 						<h1>{dataCurrentAccomodation[0].title}</h1>
 						<p>{dataCurrentAccomodation[0].location}</p>
-						<div>
-						{dataCurrentAccomodation[0].tags.map((tag, index) => {
-							return (
+						<div className="tag-container">
+							{dataCurrentAccomodation[0].tags.map((tag, index) => {
+								return (
 								<Tag key={index} value={tag} />
-							);
-						})}
-					</div>
+								);
+							})}
+							</div>
 					</div>
 					<div className="accomodation_content_host">
 						<div>

@@ -1,9 +1,11 @@
 import './tag.scss';
 import React from 'react';
+import classNames from 'classnames';
 
+const Tag = ({ value, className }) => {
+  const tagClass = classNames('tag', className);
 
-const Tag = (props) => {
-  return <span className="tag">{props.value}</span>
-}
+  return <span className={tagClass}>{value}</span>;
+};
 
-export default Tag
+export default Tag;
