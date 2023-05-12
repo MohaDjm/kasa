@@ -1,0 +1,21 @@
+@import '../../sass/main.scss';
+
+.tag {
+  background-color: #FF6060;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: .8rem;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

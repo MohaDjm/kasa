@@ -8,7 +8,7 @@ import Collapse from '../../components/collapse/Collapse';
 import greyStar from '../../assets/grey_star.png';
 import redStar from '../../assets/red_star.png';
 import { Navigate } from 'react-router-dom';
-import Tags from '../../components/tags/Tags';
+import Tag from '../../components/tag/Tag';
 
 
 export default function Accomodation() {
@@ -37,7 +37,13 @@ export default function Accomodation() {
 					<div className="accomodation_content_infos">
 						<h1>{dataCurrentAccomodation[0].title}</h1>
 						<p>{dataCurrentAccomodation[0].location}</p>
-						<Tags tags={dataCurrentAccomodation[0].tags} />
+						<div>
+						{dataCurrentAccomodation[0].tags.map((tag, index) => {
+							return (
+								<Tag key={index} value={tag} />
+							);
+						})}
+					</div>
 					</div>
 					<div className="accomodation_content_host">
 						<div>
