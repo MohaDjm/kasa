@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, BrowserRouter, Routes, Route } fro
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/kasa",
 		element: <Home />
 	},
 	{
