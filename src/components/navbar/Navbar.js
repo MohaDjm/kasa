@@ -15,7 +15,7 @@ export default function Navbar() {
                     {/* <Link  to='/'>
                         Accueil
                     </Link> */}
-                    <NavLink  to='/'
+                    <NavLink  to='/kasa'
             className={({isActive}) => isActive ? 'nav_list_item_active' : 'nav_list_item'}>
                         Accueil
                     </NavLink>
